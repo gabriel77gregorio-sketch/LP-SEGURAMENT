@@ -1,0 +1,209 @@
+---
+---
+
+<header id="header">
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <img src="/logo-branco.png" alt="SEGURAMENT" class="logo-img" />
+    </a>
+
+    <nav class="nav-menu">
+      <a href="#problema" class="nav-link">O Problema</a>
+      <a href="#solucao" class="nav-link">A Solução</a>
+      <a href="#beneficios" class="nav-link">Benefícios</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://form.respondi.app/i6Erssez" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-header">Agendar Demo</a>
+      <button class="mobile-toggle" aria-label="Menu principal" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color var(--transition-base), border-color var(--transition-base), height var(--transition-base);
+    display: flex;
+    align-items: center;
+  }
+
+  .header--scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-color: rgba(255, 255, 255, 0.05);
+    height: 70px;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    z-index: 1010;
+  }
+
+  .logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    transition: transform var(--transition-base);
+  }
+
+  .logo:hover .logo-img {
+    transform: scale(1.03);
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white-muted);
+    transition: color var(--transition-fast);
+    position: relative;
+    padding: 6px 0;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--blue);
+    transition: width var(--transition-base);
+  }
+
+  .nav-link:hover {
+    color: var(--white);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-header {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    z-index: 1010;
+  }
+
+  .mobile-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    transition: all var(--transition-base);
+  }
+
+  @media (max-width: 768px) {
+    .mobile-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--black);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      transition: right var(--transition-slow) var(--ease-out);
+      z-index: 1005;
+    }
+
+    .nav-menu.is-active {
+      right: 0;
+    }
+
+    .nav-link {
+      font-size: 1.5rem;
+      font-family: var(--font-display);
+    }
+
+    .btn-header {
+      display: none;
+    }
+
+    .mobile-toggle[aria-expanded="true"] .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: var(--blue-bright);
+    }
+
+    .mobile-toggle[aria-expanded="true"] .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-toggle[aria-expanded="true"] .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: var(--blue-bright);
+    }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('header--scrolled');
+    } else {
+      header?.classList.remove('header--scrolled');
+    }
+  });
+
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  mobileToggle?.addEventListener('click', () => {
+    const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+    mobileToggle.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+    navMenu?.classList.toggle('is-active');
+    document.body.style.overflow = !isExpanded ? 'hidden' : '';
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileToggle?.setAttribute('aria-expanded', 'false');
+      navMenu?.classList.remove('is-active');
+      document.body.style.overflow = '';
+    });
+  });
+</script>

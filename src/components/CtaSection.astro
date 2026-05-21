@@ -1,0 +1,204 @@
+---
+---
+
+<section id="cta" class="section cta-section">
+  <div class="gradient-line"></div>
+  
+  <div class="container cta-container reveal">
+    <div class="cta-inner">
+      <div class="cta-icon-wrap">
+        <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+
+      <h2 class="cta-title">
+        O prazo está acabando.<br />
+        Não deixe seus clientes <span class="text-danger">desprotegidos</span>.
+      </h2>
+      
+      <p class="cta-subtitle">
+        A ausência de um processo consistente de avaliação de riscos não será tolerada. Constatado o descumprimento, as empresas sofrerão autos de infração. Garanta que sua clínica seja a solução de conformidade, e não a causa do problema.
+      </p>
+
+      <div class="cta-actions">
+        <a href="https://form.respondi.app/i6Erssez" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-cta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Blindar Minha Clínica e Meus Clientes Agora
+        </a>
+      </div>
+
+      <p class="cta-contact">
+        <svg class="phone-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Fale com nossa equipe técnica e veja como integrar o SEGURAMENT à sua operação em tempo recorde.
+      </p>
+    </div>
+
+    <!-- Background stressed brain line art -->
+    <div class="bg-brain-silhouette">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,15 C30,15 20,25 20,45 C20,55 25,60 25,65 C25,72 30,85 45,85 C48,85 49,82 50,82 C51,82 52,85 55,85 C70,85 75,72 75,65 C75,60 80,55 80,45 C80,25 70,15 50,15 Z" fill="none" stroke="var(--blue)" stroke-width="0.5" stroke-dasharray="2 3"/>
+        <path d="M35,30 C30,40 38,50 50,45 C50,30 40,25 35,30 Z" fill="none" stroke="var(--blue)" stroke-width="0.3" opacity="0.7"/>
+        <path d="M65,30 C70,40 62,50 50,45 C50,30 60,25 65,30 Z" fill="none" stroke="var(--blue)" stroke-width="0.3" opacity="0.7"/>
+        <path d="M50,45 L50,82" stroke="var(--blue)" stroke-width="0.4" stroke-dasharray="1 1"/>
+        <path d="M45,28 L30,40 M55,28 L70,40" stroke="#ff3333" stroke-width="0.5" opacity="0.8"/> <!-- Stress cracks -->
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    background-color: var(--black);
+    position: relative;
+    padding: 140px 0;
+    overflow: hidden;
+  }
+
+  .gradient-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  }
+
+  .cta-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 50%;
+    color: var(--danger);
+    margin-bottom: 32px;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+    animation: alertPulse 2s infinite ease-in-out;
+  }
+
+  @keyframes alertPulse {
+    0%, 100% { 
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+    }
+    50% { 
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(239, 68, 68, 0.35);
+      border-color: rgba(239, 68, 68, 0.6);
+    }
+  }
+
+  .warning-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+  }
+
+  .text-danger {
+    color: var(--danger);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+  }
+
+  .cta-subtitle {
+    font-size: 1.125rem;
+    color: var(--white-muted);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .cta-actions {
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-cta {
+    padding: 20px 48px;
+    font-size: 1.1rem;
+    background-color: var(--blue);
+    border: 1px solid var(--blue-light);
+    box-shadow: 0 0 20px rgba(0, 74, 173, 0.4);
+    animation: ctaPulse 2s infinite alternate;
+  }
+
+  @keyframes ctaPulse {
+    0% { box-shadow: 0 0 15px rgba(0, 74, 173, 0.3); }
+    100% { box-shadow: 0 0 35px rgba(0, 74, 173, 0.6); }
+  }
+
+  .btn-cta:hover {
+    background-color: var(--blue-light);
+    transform: translateY(-2px);
+  }
+
+  .cta-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--white-dim);
+  }
+
+  .phone-icon {
+    flex-shrink: 0;
+  }
+
+  /* Brain Silhouette watermark background styling */
+  .bg-brain-silhouette {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    opacity: 0.08;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .bg-brain-silhouette svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .btn-cta {
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 1rem;
+    }
+  }
+</style>

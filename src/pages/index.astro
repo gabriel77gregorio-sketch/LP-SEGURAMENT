@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import SolutionSection from '../components/SolutionSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="SEGURAMENT — Compliance em Riscos Psicossociais | NR-1"
+  description="O SEGURAMENT é o software focado em compliance que blinda a sua assessoria de SST contra multas e autuações da nova NR-1. Avaliação de riscos psicossociais com metodologia validada pelo MTE."
+>
+  <Header />
+  <main>
+    <Hero />
+    <ProblemSection />
+    <SolutionSection />
+    <BenefitsSection />
+    <CtaSection />
+  </main>
+  <Footer />
+</Layout>

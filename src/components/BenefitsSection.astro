@@ -1,0 +1,198 @@
+---
+---
+
+<section id="beneficios" class="section benefits-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        Benefícios
+      </div>
+      <h2 class="section-title">
+        Compliance que gera <br />
+        <span class="highlight">valor real para sua clínica.</span>
+      </h2>
+    </div>
+
+    <!-- 3 Cards Layout -->
+    <div class="benefits-grid">
+      <!-- Card 1 -->
+      <div class="benefit-card reveal">
+        <div class="icon-wrap">
+          <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <!-- Lock shield SVG -->
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4M12 16h.01" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Elimine o Passivo</h3>
+        <p class="card-desc">
+          Entregue aos seus clientes relatórios altamente consistentes e auditáveis que atendem exatamente ao que a fiscalização do Ministério do Trabalho exige para o PGR.
+        </p>
+        <span class="card-line"></span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="benefit-card reveal">
+        <div class="icon-wrap">
+          <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <!-- Brain trophy / star concept SVG -->
+            <circle cx="12" cy="8" r="7"/>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Destaque-se da Concorrência</h3>
+        <p class="card-desc">
+          Enquanto a maioria das clínicas de SST continua preenchendo planilhas amadoras ou enviando PDFs estáticos de clima organizacional, você entrega uma assessoria blindada.
+        </p>
+        <span class="card-line"></span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="benefit-card reveal">
+        <div class="icon-wrap">
+          <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <!-- Rocket scale SVG -->
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Escalabilidade Segura</h3>
+        <p class="card-desc">
+          Monitore o nível de esgotamento mental de centenas de empresas parceiras de forma centralizada e sem esforço operacional repetitivo. Tudo é automatizado na nuvem.
+        </p>
+        <span class="card-line"></span>
+      </div>
+    </div>
+
+    <!-- Large System Screenshot slot at the bottom -->
+    <div class="system-screenshot-container reveal">
+      <div class="system-screenshot-label">Painel de Acompanhamento Geral</div>
+      <div class="system-screenshot-mockup">
+        <div class="system-screenshot">
+          <div class="placeholder-content">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+              <!-- Mini graphs -->
+              <path d="M6 10l3-3 3 3 4-4"/>
+            </svg>
+            <span class="placeholder-tag">[IMAGEM DO PAINEL PRINCIPAL DO SEGURAMENT]</span>
+            <span class="placeholder-sub">Visão consolidada de todas as empresas e seus respectivos status de conformidade da NR-1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits-section {
+    background-color: var(--black-rich);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .section-header {
+    margin-bottom: 60px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  .benefit-card {
+    background-color: var(--black-card);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform var(--transition-base), border-color var(--transition-base);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 74, 173, 0.3);
+  }
+
+  .icon-wrap {
+    color: var(--blue-bright);
+    margin-bottom: 24px;
+  }
+
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+    color: var(--white-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+
+  .card-line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--blue);
+  }
+
+  /* Large screenshot slot styling */
+  .system-screenshot-container {
+    background-color: var(--black-soft);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    position: relative;
+  }
+
+  .system-screenshot-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    display: inline-block;
+    border-left: 2px solid var(--blue);
+    padding-left: 8px;
+  }
+
+  .system-screenshot-mockup {
+    position: relative;
+    width: 100%;
+  }
+
+  .system-screenshot {
+    border-radius: var(--radius-lg);
+    background-color: var(--black);
+    transition: border-color var(--transition-base);
+  }
+
+  .system-screenshot:hover {
+    border-color: rgba(0, 74, 173, 0.4);
+  }
+
+  @media (max-width: 991px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+</style>
